@@ -7,8 +7,8 @@ add = function()
     second = $('#operand_2').val();    
     result= parseInt(first)+parseInt(second);
     jQuery('#result').html(first+"+"+second+ "=" + (result));
-
-    jQuery('#history').html(first+"+"+second+ "=" + (result));
+    jQuery('#history').append("<li></li>"+first+"+"+second+ "=" + (result));
+    
 }
 sub = function() 
 {   first = $('#operand_1').val();
@@ -16,14 +16,14 @@ sub = function()
     result= parseInt(first)-parseInt(second);
     jQuery('#result').html(first+"-"+second+ "=" + (result));
 
-    jQuery('#history').html(first+"-"+second+ "=" + (result));
+    jQuery('#history').append("<li></li>"+first+"-"+second+ "=" + (result)+ "\n");
 }
 mul = function() 
 {   first = $('#operand_1').val();
     second = $('#operand_2').val();    
     result= parseInt(first)*parseInt(second);
     jQuery('#result').html(first+"*"+second+ "=" + (result));
-    jQuery('#history').html(first+"*"+second+ "=" + (result));
+    jQuery('#history').append("<li></li>"+first+"*"+second+ "=" + (result)+ "\n");
 }
 div = function() 
 {   first = $('#operand_1').val();
@@ -31,12 +31,13 @@ div = function()
     result= parseInt(first)/parseInt(second);
     jQuery('#result').html(first+"/"+second+ "=" + (result));
 
-    jQuery('#history').html(first+"/"+second+ "=" + (result));
+    jQuery('#history').append("<li></li>"+first+"/"+second+ "=" + (result)+ "\n");
 }
 clear=function()
 {
     result=" ";
     jQuery('#result').html(result);
+    jQuery('#history').html(result);
 }
 
 setup = function() {    
