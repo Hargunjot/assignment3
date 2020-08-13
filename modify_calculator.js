@@ -6,32 +6,41 @@ add = function()
     first = $('#operand_1').val();
     second = $('#operand_2').val();    
     result= parseInt(first)+parseInt(second);
-    jQuery('#result').html(first+"+"+second+ "=" + (result));
-    jQuery('#history').append("<li></li>"+first+"+"+second+ "=" + (result));
+    if(first & second){
+        jQuery('#result').html(first+"+"+second+ "=" + (result));
+        jQuery('#history').append("<li></li>"+first+"+"+second+ "=" + (result));
+    }
+    
     
 }
 sub = function() 
 {   first = $('#operand_1').val();
     second = $('#operand_2').val();    
     result= parseInt(first)-parseInt(second);
-    jQuery('#result').html(first+"-"+second+ "=" + (result));
 
+    if(first & second){
+    jQuery('#result').html(first+"-"+second+ "=" + (result));
     jQuery('#history').append("<li></li>"+first+"-"+second+ "=" + (result)+ "\n");
+    }
 }
 mul = function() 
 {   first = $('#operand_1').val();
     second = $('#operand_2').val();    
     result= parseInt(first)*parseInt(second);
+
+    if(first & second){
     jQuery('#result').html(first+"*"+second+ "=" + (result));
     jQuery('#history').append("<li></li>"+first+"*"+second+ "=" + (result)+ "\n");
+    }
 }
 div = function() 
 {   first = $('#operand_1').val();
     second = $('#operand_2').val();    
     result= parseInt(first)/parseInt(second);
+    if(first & second){
     jQuery('#result').html(first+"/"+second+ "=" + (result));
-
     jQuery('#history').append("<li></li>"+first+"/"+second+ "=" + (result)+ "\n");
+    }
 }
 clear=function()
 {
