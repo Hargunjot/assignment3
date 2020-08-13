@@ -1,24 +1,42 @@
+var first=0;
+var second=0;
 
 add = function() 
-{  result =  parseInt(jQuery('#operand_1').html()) +  parseInt(jQuery('#operand_2').html());    
-    jQuery('#result').html(result);
+{ 
+    first = $('#operand_1').val();
+    second = $('#operand_2').val();    
+    result= parseInt(first)+parseInt(second);
+    jQuery('#result').html(first+"+"+second+ "=" + (result));
+
+    jQuery('#history').html(first+"+"+second+ "=" + (result));
 }
 sub = function() 
-{  result =  parseInt(jQuery('#operand_1').html()) -  parseInt(jQuery('#operand_2').html());    
-    jQuery('#result').html(result);
+{   first = $('#operand_1').val();
+    second = $('#operand_2').val();    
+    result= parseInt(first)-parseInt(second);
+    jQuery('#result').html(first+"-"+second+ "=" + (result));
+
+    jQuery('#history').html(first+"-"+second+ "=" + (result));
 }
 mul = function() 
-{  result =  parseInt(jQuery('#operand_1').html()) *  parseInt(jQuery('#operand_2').html());    
-    jQuery('#result').html(result);
+{   first = $('#operand_1').val();
+    second = $('#operand_2').val();    
+    result= parseInt(first)*parseInt(second);
+    jQuery('#result').html(first+"*"+second+ "=" + (result));
+    jQuery('#history').html(first+"*"+second+ "=" + (result));
 }
 div = function() 
-{  result =  parseInt(jQuery('#operand_1').html()) /  parseInt(jQuery('#operand_2').html());    
-    jQuery('#result').html(result);
+{   first = $('#operand_1').val();
+    second = $('#operand_2').val();    
+    result= parseInt(first)/parseInt(second);
+    jQuery('#result').html(first+"/"+second+ "=" + (result));
+
+    jQuery('#history').html(first+"/"+second+ "=" + (result));
 }
 clear=function()
 {
-    result= "";
-    jQuery('#result').html(" ");
+    result=" ";
+    jQuery('#result').html(result);
 }
 
 setup = function() {    
