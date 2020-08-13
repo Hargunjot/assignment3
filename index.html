@@ -5,14 +5,19 @@
         <script src="modify_calculator.js"></script>  
     </head>  
     <body>    
-        <div>First operand:<span id="operand_1"> 23 </span></div>    
-        <div>Second operand:<span id="operand_2"> 56 </span></div>    
+        <div>First operand:<input id="operand_1"></div>    
+        <div>Second operand:<input  id= "operand_2"></div> 
+        
         <button id="add_button">+</button>
         <button id="sub_button">-</button>   
         <button id="mul_button">*</button>   
         <button id="div_button">/</button>       
         <div>Result: <span id="result"> </span></div>  
-        <button id="clear_button" type="button" >Clear</button> 
+        <br/>
+        <h2>History</h2>
+        <button id="clear_button" type="button" >Clear</button>
+        <div id="history"></div>
+
     </body>
     
 </html>
